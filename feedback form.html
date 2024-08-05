@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="n.css">
+<script type= "text/javascript">
+    function Submit_Form()
+    
+        {
+        str1= document.fm.fname.value;
+    
+        if(str1.length == 0)
+        {
+    
+        alert("enter first name");
+    
+        }
+    
+        str2 = document.fm.lname.value;
+    
+        if(str2.length == 0)
+        {   
+        alert("enter last name");
+        }
+    
+        if(document.fm.city.selectedIndex == 0)
+        {
+    
+        alert("select your city");
+    
+        }
+        reg =/^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
+        var addr=document.fm.email.value;
+        if(reg.test(addr) == false)
+    
+        {
+        alert("invalid email address");
+        }
+    if(str1.length != 0 && str2.length != 0 && document.fm.city.selectedIndex != 0 && reg.test(addr) == true)
+  
+    {
+    window.open("abc.html");
+    }
+    }
+    
+    </script>
+
+
+</head>
+<body>
+    
+    <!--
+    - #feedbackform 
+  -->
+  <div class="flex-container">
+    <div class="flex-item" style="padding-left: 100px;">
+<br>
+<div class="background" style="background-image: assets/images/HD-wallpaper-emergency-room-hospital.jpg;">
+  <form name="fm" style="">
+    <fieldset>
+        <h1>Your FeedBack</h1>
+
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" id="fname"><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="lname"><br>
+
+        <label for="fname">Email:</label>
+        <input type="text" name="email" id="email" size="30"><br>
+
+
+
+
+        <label for="city">City:</label>
+        <select name="city" id="city">
+            <option value="">Select City</option>
+            <option value="islamabad">Islamabad</option>
+            <option value="peshawar">Peshawar</option>
+            <option value="karachi">Karachi</option>
+            <option value="quetta">Quetta</option>
+            <option value="lahore">Lahore</option>
+        </select> <br>
+
+        <label for="comments">Comments:</label>
+        <textarea rows="5" cols="25" name="" id="comments"></textarea><br>
+
+
+        <input type="button" id="btn5" name="btn" value="Register" onclick="Submit_Form()">
+        <input type="reset"  id="btn5" name="reset" value="Reset" style="margin-top: 10px;">
+    </fieldset>
+</form>
+</div>
+
+
+<!-- Map -->
+
+</div>
+<div class="flex-item" style="padding-right: 100px;">
+<div class="map">
+<div class="clearfix text-formatted field field--name-mht-text field--type-text-long field--label-hidden field__item"><p><iframe style="border:0;" frameborder="0" height="650" title="" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14472.37819861118!2d67.03455595!3d24.92884875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1719844764040!5m2!1sen!2s" width="500px"></iframe></p>
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
